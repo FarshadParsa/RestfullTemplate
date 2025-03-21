@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Authors>F.Parsa</Authors>
+		<Company>AC_BIG</Company>
+		<AssemblyName>AC_PPC.Core</AssemblyName>
+		<RootNamespace>AC_PPC.Core</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="DataLayer\UserDL_Old.cs" />
+		<Compile Remove="Interface\ICountryService.cs" />
+		<Compile Remove="Interface\ICustomerDraftBobinService.cs" />
+		<Compile Remove="Interface\ICustomerDraftPaletsBobinsService.cs" />
+		<Compile Remove="Interface\ICustomerDraftService.cs" />
+		<Compile Remove="Interface\ICustomerService.cs" />
+		<Compile Remove="Interface\IDataDosingService.cs" />
+		<Compile Remove="Interface\IDataGrindingService.cs" />
+		<Compile Remove="Interface\IDataPatilService.cs" />
+		<Compile Remove="Interface\IDataPremixService.cs" />
+		<Compile Remove="Interface\IPaletService.cs" />
+		<Compile Remove="Interface\IProductGroupService.cs" />
+		<Compile Remove="Interface\IProductTypeService.cs" />
+		<Compile Remove="Interface\IProvinceService_OLD.cs" />
+		<Compile Remove="Interface\ISettingGeneralService.cs" />
+		<Compile Remove="Interface\IStationTypeService.cs" />
+		<Compile Remove="Interface\Old\IRawMaterialGroupService.cs" />
+		<Compile Remove="Interface\Old\IRawMaterialService.cs" />
+		<Compile Remove="Models\Bobins.cs" />
+		<Compile Remove="Models\Customer.cs" />
+		<Compile Remove="Models\CustomerDraftPaletsBobins.cs" />
+		<Compile Remove="Models\DataDosing.cs" />
+		<Compile Remove="Models\DataGrinding.cs" />
+		<Compile Remove="Models\DataPatil.cs" />
+		<Compile Remove="Models\DataPremix.cs" />
+		<Compile Remove="Models\PaletBobins.cs" />
+		<Compile Remove="Models\Product.cs" />
+		<Compile Remove="Models\ProductGroup.cs" />
+		<Compile Remove="Models\Province.cs" />
+		<Compile Remove="Models\Province_OLD.cs" />
+		<Compile Remove="Services\CountryService.cs" />
+		<Compile Remove="Services\CustomerDraftBobinService.cs" />
+		<Compile Remove="Services\CustomerDraftPaletsBobinsService.cs" />
+		<Compile Remove="Services\CustomerDraftService.cs" />
+		<Compile Remove="Services\CustomerService.cs" />
+		<Compile Remove="Services\DataDosingService.cs" />
+		<Compile Remove="Services\DataGrindingService.cs" />
+		<Compile Remove="Services\DataPatilService.cs" />
+		<Compile Remove="Services\DataPremixService.cs" />
+		<Compile Remove="Services\ProvinceService_OLD.cs" />
+		<Compile Remove="Services\RawMaterialGroupService.cs" />
+		<Compile Remove="Services\RawMaterialService.cs" />
+		<Compile Remove="Services\StationTypeService.cs" />
+		<Compile Remove="SettingGeneralService.cs" />
+		<Compile Remove="Settings.Designer.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Remove="Settings.resx" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+		<!--<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.16">-->
+		<!-- <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.2" /> -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.26" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Http" Version="3.1.6" />
+		<!--<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />-->
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Framework\Seedwork.Abstractions\Seedwork.Abstractions.csproj" />
+		<ProjectReference Include="..\PPC.Base\PPC.Base.csproj" />
+		<ProjectReference Include="..\PPC.Common\PPC.Common.csproj" />
+		<ProjectReference Include="..\PPC.Response\PPC.Response.csproj" />
+		<ProjectReference Include="..\Resources\Resources.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Interface\Old\" />
+		<Folder Include="Services\View\" />
+	</ItemGroup>
+
+
+</Project>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>netstandard2.1</TargetFramework>
+	  <Authors>F.Parsa</Authors>
+	  <Company>AC_BIG</Company>
+	  <AssemblyName>AC_PPC.Common</AssemblyName>
+	  <RootNamespace>AC_PPC.Common</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PPC.Base\PPC.Base.csproj" />
+  </ItemGroup>
+
+</Project>

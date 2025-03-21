@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Authors>F.Parsa</Authors>
+    <Company>AC_BIG</Company>
+    <AssemblyName>AC_PPC.API</AssemblyName>
+    <RootNamespace>AC_PPC.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\**" />
+    <Compile Remove="Controllers\AtlasCell\**" />
+    <Compile Remove="Controllers\BaseInfo\OptimumMetragPerRoll\**" />
+    <Compile Remove="Controllers\General\Setting\**" />
+    <Compile Remove="Controllers\PPC\**" />
+    <Content Remove="Areas\**" />
+    <Content Remove="Controllers\AtlasCell\**" />
+    <Content Remove="Controllers\BaseInfo\OptimumMetragPerRoll\**" />
+    <Content Remove="Controllers\General\Setting\**" />
+    <Content Remove="Controllers\PPC\**" />
+    <EmbeddedResource Remove="Areas\**" />
+    <EmbeddedResource Remove="Controllers\AtlasCell\**" />
+    <EmbeddedResource Remove="Controllers\BaseInfo\OptimumMetragPerRoll\**" />
+    <EmbeddedResource Remove="Controllers\General\Setting\**" />
+    <EmbeddedResource Remove="Controllers\PPC\**" />
+    <None Remove="Areas\**" />
+    <None Remove="Controllers\AtlasCell\**" />
+    <None Remove="Controllers\BaseInfo\OptimumMetragPerRoll\**" />
+    <None Remove="Controllers\General\Setting\**" />
+    <None Remove="Controllers\PPC\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\DataDosingController.cs" />
+    <Compile Remove="Controllers\DataGrindingController.cs" />
+    <Compile Remove="Controllers\DataPatilController.cs" />
+    <Compile Remove="Controllers\DataPremixController.cs" />
+    <Compile Remove="Controllers\RawMaterialController.cs" />
+    <Compile Remove="Controllers\RawMaterialGroupController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Areas\Admin\Controllers\Log\LogController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Log\LoginLogController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Permissions\DenyAccessController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Permissions\MenuAccessStateController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Setting\SettingController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Setting\SettingGeneralController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Setting\SettingUpdateController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyMemoryCache" Version="1.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PPC.Base\PPC.Base.csproj" />
+    <ProjectReference Include="..\PPC.Common\PPC.Common.csproj" />
+    <ProjectReference Include="..\PPC.Core\PPC.Core.csproj" />
+    <ProjectReference Include="..\PPC.Response\PPC.Response.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Controllers\General\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+</Project>

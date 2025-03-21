@@ -1,0 +1,7 @@
+.
+sa
+123456
+AtlasCellDB
+C:\_Thread\BIG.PPC.AtlasCell.BE\Ver01\PPC.Core\DataLayer
+AtlasCellData
+DL
