@@ -10,7 +10,6 @@ namespace PPC.Core.Repository
         BaseRepository<SysRole> SysRoles { get; }
         BaseRepository<SysUserRole> SysUserRoles { get; }
         BaseRepository<SysUserToken> SysUserTokens { get; }
-        BaseRepository<Stations> Stations { get; }
 
     }
 }

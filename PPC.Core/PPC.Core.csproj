@@ -90,6 +90,7 @@
 
 	<ItemGroup>
 		<Folder Include="Interface\Old\" />
+		<Folder Include="Models\View\" />
 		<Folder Include="Services\View\" />
 	</ItemGroup>
 
