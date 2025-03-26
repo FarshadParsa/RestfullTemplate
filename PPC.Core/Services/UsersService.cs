@@ -1,12 +1,12 @@
 ﻿using AtlasCellData.ADO;
 using Microsoft.EntityFrameworkCore;
-using PPC.Common;
-using PPC.Common.Auth;
-using PPC.Core.Common.Security;
-using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
-using PPC.Response.DTOs;
+using WebApi.Common;
+using WebApi.Common.Auth;
+using WebApi.Core.Common.Security;
+using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
+using WebApi.Response.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class UsersService : BaseService, IUsersService
     {
@@ -545,32 +545,6 @@ namespace PPC.Core.Services
             }
         }
 
-
-        public async Task<bool> HasUserAccessToStation(int userId, int stationId)
-        {
-            try
-            {
-                bool statuse = false;
-
-                var db = _repositoryFactory;
-                var q = await (from users in db.Users.Table
-                               join userGroupAssigns in db.UserGroupAssigns.Table on users.UserID equals userGroupAssigns.UserID
-                               join userGroups in db.UserGroups.Table on userGroupAssigns.UserGroupID equals userGroups.UserGroupID
-                               join userGroupStations in db.UserGroupStations.Table on userGroups.UserGroupID equals userGroupStations.UserGroupID
-                               join stations in db.Stations.Table on userGroupStations.StationID equals stations.StationID
-                               where users.UserID == userId && stations.StationID == stationId
-                               select users.UserID
-                         ).CountAsync();
-
-
-                statuse = q > 0;
-                return statuse;
-            }
-            catch
-            {
-                throw;
-            }
-        }
 
         public long UserSingnIn(int userId)
         {

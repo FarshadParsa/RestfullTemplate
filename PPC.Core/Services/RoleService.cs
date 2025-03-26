@@ -1,13 +1,14 @@
-﻿using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
+﻿using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using WebApi.Common.Attributes;
 
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     [ServiceMapTo(typeof(IRoleService))]
     public class RoleService : BaseService, IRoleService

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 using Newtonsoft.Json;
-namespace PPC.Response.DTOs
+namespace WebApi.Response.DTOs
 {
     public class ProvincesDTO
     {

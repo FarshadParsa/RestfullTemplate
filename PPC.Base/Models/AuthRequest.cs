@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace PPC.Base
+namespace WebApi.Base
 {
     public class AuthRequest
     {

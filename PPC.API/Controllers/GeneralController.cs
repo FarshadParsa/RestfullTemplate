@@ -1,17 +1,17 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using PPC.Base.Models.Exceptions;
-using PPC.Core.Interface;
-using PPC.Core.Log;
-using PPC.Core.Services;
-using PPC.Response.DTOs;
-using PPC.Response.Result;
+using WebApi.Base.Models.Exceptions;
+using WebApi.Core.Interface;
+using WebApi.Core.Log;
+using WebApi.Core.Services;
+using WebApi.Response.DTOs;
+using WebApi.Response.Result;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 
-namespace PPC.API.Controllers
+namespace WebApi.API.Controllers
 {
 
     [Authorize]
@@ -43,7 +43,7 @@ namespace PPC.API.Controllers
             try
             {
 
-                var res = new List<string> { PPC.Common.General.CurrentDateString };
+                var res = new List<string> { WebApi.Common.General.CurrentDateString };
 
                 return Ok(ResponseFactory.OKCreator<List<string>>(res, 1));
 
@@ -69,7 +69,7 @@ namespace PPC.API.Controllers
             try
             {
 
-                var res = new List<string> { PPC.Common.General.CurrentTimeString};
+                var res = new List<string> { WebApi.Common.General.CurrentTimeString};
 
                 return Ok(ResponseFactory.OKCreator<List<string>>(res, 1));
 
@@ -95,7 +95,7 @@ namespace PPC.API.Controllers
             try
             {
 
-                var res = new List<string> { PPC.Common.General.CurrentTimeWithSecondString };
+                var res = new List<string> { WebApi.Common.General.CurrentTimeWithSecondString };
 
                 return Ok(ResponseFactory.OKCreator<List<string>>(res, 1));
 

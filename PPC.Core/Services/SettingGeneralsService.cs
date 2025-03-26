@@ -1,15 +1,18 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PPC.Core.Interface;
+using Microsoft.Extensions.DependencyInjection;
+using WebApi.Common.Attributes;
+using WebApi.Core.Interface;
 
-using PPC.Core.Models;
+using WebApi.Core.Models;
 
-using PPC.Core.Repository;
+using WebApi.Core.Repository;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
+    [ServiceMapTo(typeof(ISettingGeneralsService), ServiceLifetime.Scoped)]
     public class SettingGeneralsService : BaseService, ISettingGeneralsService
     {
         IUnitOfWork _unitOfWork;
@@ -167,12 +170,12 @@ namespace PPC.Core.Services
         {
             try
             {
-
                 return await _repositoryFactory.SettingGenerals.FirstOrDefaultAsync(x => x.Version == vrsion) != null;
+
             }
-            catch
+            catch (System.Exception ex)
             {
-                throw;
+                return false;
             }
         }
 

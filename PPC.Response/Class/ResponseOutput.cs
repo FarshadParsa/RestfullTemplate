@@ -1,10 +1,10 @@
-﻿using PPC.Response.Interface;
+﻿using WebApi.Response.Interface;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Response.Class
+namespace WebApi.Response.Class
 {
     /// <summary>
     /// ResponseOutput

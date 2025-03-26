@@ -1,20 +1,21 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-using PPC.Core.Common;
-using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
+using WebApi.Core.Common;
+using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using PPC.Base;
+using WebApi.Base;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using WebApi.Common.Attributes;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     [ServiceMapTo(typeof(IUserAccountService))]
     public class UserAccountService : BaseService, IUserAccountService

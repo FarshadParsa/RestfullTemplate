@@ -4,14 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PPC.Common;
-using PPC.Core.Interface;
+using WebApi.Common;
+using WebApi.Core.Interface;
 
-using PPC.Core.Models;
+using WebApi.Core.Models;
 
-using PPC.Core.Repository;
+using WebApi.Core.Repository;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class LogsService : BaseService, ILogsService
     {
@@ -195,10 +195,13 @@ namespace PPC.Core.Services
         {
             try
             {
-                var logs = await _repositoryFactory.Logs.Table.Include(x=>x.LoginLog).ThenInclude(x=>x.Station).Include(x=>x.User)
-                    .Where(x=>x.Date == dateFrom).ToListAsync();
+                //var logs = await _repositoryFactory.Logs.Table.Include(x=>x.LoginLog).ThenInclude(x=>x.Station).Include(x=>x.User)
+                //    .Where(x=>x.Date == dateFrom).ToListAsync();
 
-                return logs;
+                //return logs;
+
+                return null;
+
             }
             catch
             {

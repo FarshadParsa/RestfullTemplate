@@ -7,8 +7,8 @@ using System.Linq;
 using System.Xml;
 using Microsoft.Win32;
 using Microsoft.Data.SqlClient;
-using PPC.Core;
-using PPC.Base.Extensions;
+using WebApi.Core;
+using WebApi.Base.Extensions;
 
 namespace AtlasCellData.ADO
 {
@@ -23,8 +23,8 @@ namespace AtlasCellData.ADO
         //private static string _databasePassword = "123321";
         //private static string _sqlServerInstanceName = "";
 
-        public static string SqlServerName { get { return PPC.DatabaseSetting.ServerAddress; } }
-        public static string DatabaseName { get { return PPC.DatabaseSetting.DatabaseName; } }
+        public static string SqlServerName { get { return DatabaseSetting.ServerAddress; } }
+        public static string DatabaseName { get { return DatabaseSetting.DatabaseName; } }
         public static string IPAddressCurrent { get; set; }
         public static string connString = "";
         public SqlCommand sqlCommand;
@@ -95,7 +95,7 @@ namespace AtlasCellData.ADO
             if (connString != "") return connString;
             try
             {
-                string sqlConnectionStr = "workstation id={0};packet size=4096;user id=" + PPC.DatabaseSetting.DatabaseUserName +
+                string sqlConnectionStr = "workstation id={0};packet size=4096;user id=" + DatabaseSetting.DatabaseUserName +
                                              ";data source={1};persist security info=True;" +
                                              "initial catalog={2};password={3};Connection Timeout=30;TrustServerCertificate=True;";
 
@@ -130,7 +130,7 @@ namespace AtlasCellData.ADO
                 //}
 
                 //temp += "\"" + retValue + "\";persist security info=False;initial catalog=" + PPC.DatabaseSetting.DatabaseName;// BaseDataAccessLayerClass.PPCDatabase;
-                sqlConnectionStr = string.Format(sqlConnectionStr, Environment.MachineName, SqlServerName, PPC.DatabaseSetting.DatabaseName, PPC.DatabaseSetting.DatabasePassword);
+                sqlConnectionStr = string.Format(sqlConnectionStr, Environment.MachineName, SqlServerName, DatabaseSetting.DatabaseName, DatabaseSetting.DatabasePassword);
 
                 return sqlConnectionStr;
             }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Base.Models.Exceptions
+namespace WebApi.Base.Models.Exceptions
 {
     public class NotFoundApiException : HttpResponseException
     {

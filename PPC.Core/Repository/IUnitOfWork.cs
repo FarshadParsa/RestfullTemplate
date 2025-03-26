@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Repository
+namespace WebApi.Core.Repository
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork 
     {
         int Commit();
         IDbContextTransaction StartTransaction();
@@ -13,8 +13,8 @@ namespace PPC.Core.Repository
         void Rollback();
 
         Task<IDbContextTransaction> StartTransactionAsync();
-        void CommitTransactionAsync();
-        void RollbackAsync();
+        Task CommitTransactionAsync();
+        Task RollbackAsync();
 
         Task<int> CommitAsync();
     }
@@ -22,7 +22,6 @@ namespace PPC.Core.Repository
     public class UnitOfWork<TDbContext> : IUnitOfWork where TDbContext : DbContext
     {
         private readonly TDbContext _dbContext;
-        //private IDbContextTransaction _transaction;
 
         public UnitOfWork(TDbContext context)
         {
@@ -67,12 +66,12 @@ namespace PPC.Core.Repository
             return await _dbContext.Database.BeginTransactionAsync();
         }
 
-        public async void CommitTransactionAsync()
+        public async Task CommitTransactionAsync()
         {
             await _dbContext.Database.CommitTransactionAsync();
         }
 
-        public async void RollbackAsync()
+        public async Task RollbackAsync()
         {
            await _dbContext.Database.RollbackTransactionAsync();
         }
@@ -90,7 +89,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Repository
+namespace WebApi.Core.Repository
 {
     public interface IUnitOfWork
     {

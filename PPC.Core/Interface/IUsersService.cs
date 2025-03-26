@@ -1,8 +1,8 @@
-﻿using PPC.Core.Models;
+﻿using WebApi.Core.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface IUsersService
     {
@@ -79,8 +79,6 @@ namespace PPC.Core.Interface
         Task<long> LoginAsync(LoginLogs loginLog, long? preLoginId);
 
         Task<bool> LogoutAsync(long loginId);
-
-        Task<bool> HasUserAccessToStation(int userId, int stationId);
 
         long UserSingnIn(int userId);
 

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
-using PPC.Base.Extensions;
-using PPC.Base.Models;
+using WebApi.Base.Extensions;
+using WebApi.Base.Models;
 
-namespace PPC.Common.Auth
+namespace WebApi.Common.Auth
 {
     /// <summary>
     /// User

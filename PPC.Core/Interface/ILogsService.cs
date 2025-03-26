@@ -1,10 +1,10 @@
-using PPC.Core.Models;
-using PPC.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface ILogsService
     {

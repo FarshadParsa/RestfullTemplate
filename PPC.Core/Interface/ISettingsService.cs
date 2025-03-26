@@ -1,9 +1,9 @@
-using PPC.Core.Models;
-using PPC.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface ISettingsService
     {
@@ -43,26 +43,12 @@ namespace PPC.Core.Interface
         bool Append(Settings settings);
 
         /// <summary>
-        /// Append a record
-        /// </summary>
-        /// <param name="settings"></param>
-        /// <returns></returns>
-        bool Append(SettingUpdateViewModel settingUpdateViewModel);
-
-        /// <summary>
         /// Update a record
         /// </summary>
         /// <param name="settings"></param>
         /// <returns></returns>
         bool Update(Settings settings);
 
-
-        /// <summary>
-        /// Update a record
-        /// </summary>
-        /// <param name="settings"></param>
-        /// <returns></returns>
-        bool Update(SettingUpdateViewModel settingUpdateViewModel);
 
         /// <summary>
         /// Delete a record
@@ -74,24 +60,6 @@ namespace PPC.Core.Interface
         Task<Settings> GetActiveVersionAsync();
         Task<Settings> GetActiveVersionByUserIdAsync(int userID);
         Task<Settings> GetActiveVersionByStationIdAsync(int stationID);
-
-        /// <summary>
-        /// Get all Setting Async
-        /// </summary>
-        /// <returns></returns>
-        Task<List<SettingUpdateViewModel>> GetAllVersionInfo();
-
-        /// <summary>
-        /// Get all Setting Users 
-        /// </summary>
-        /// <returns></returns>
-        List<SettingUserViewModel> GetSettingUsers(string version);
-
-        /// <summary>
-        /// Get all Setting Stations 
-        /// </summary>
-        /// <returns></returns>
-        List<SettingStationViewModel> GetSettingStations(string version);
 
 
     }

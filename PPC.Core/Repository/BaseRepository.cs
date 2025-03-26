@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Repository
+namespace WebApi.Core.Repository
 {
     public class BaseRepository<TModel> where TModel : class, IEntity
     {
@@ -19,7 +19,7 @@ namespace PPC.Core.Repository
 
         #region ctor
 
-        public BaseRepository(PPCDbContext context)
+        public BaseRepository(ApplicationDbContext context)
         {
             _db = context as DbContext;
         }

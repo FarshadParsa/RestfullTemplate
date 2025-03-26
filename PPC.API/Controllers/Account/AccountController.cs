@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using PPC.Base;
-using PPC.Base.Models.Exceptions;
-using PPC.Common.Auth;
-using PPC.Core.Common;
-using PPC.Core.Extensions;
-using PPC.Core.Interface;
-using PPC.Core.Log;
-using PPC.Response.DTOs;
-using PPC.Response.Result;
-using PPC.Base.Extensions;
+using WebApi.Base;
+using WebApi.Base.Models.Exceptions;
+using WebApi.Common.Auth;
+using WebApi.Core.Common;
+using WebApi.Core.Extensions;
+using WebApi.Core.Interface;
+using WebApi.Core.Log;
+using WebApi.Response.DTOs;
+using WebApi.Response.Result;
+using WebApi.Base.Extensions;
 
-namespace PPC.API.Controllers
+namespace WebApi.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [EnableCors("CorsPolicy")]
-    public class AccountController : Controller
+    public class UserAccountController : Controller
     {
         #region Properties
         private readonly IUserAccountService _usersService;
@@ -34,7 +34,7 @@ namespace PPC.API.Controllers
         #region ctor
 
 
-        public AccountController(
+        public UserAccountController(
             IUserAccountService usersService,
             ITokenStoreService tokenStoreService,
             ITokenFactoryService tokenFactoryService,
@@ -116,10 +116,6 @@ namespace PPC.API.Controllers
         {
             try
             {
-               // var claimsIdentity = User.Identity as ClaimsIdentity;
-                //  return Json(new { Username = claimsIdentity.Name });
-                
-
                 var user =  _usersService.GetUserById(_user.Id.ToIntZero());
                 if (user == null)
                     throw new NotFoundApiException();
@@ -140,9 +136,6 @@ namespace PPC.API.Controllers
                 throw new BadRequestApiException();
             }
         }
-
-
-
 
         /*
          * RefreshToken

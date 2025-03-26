@@ -1,20 +1,19 @@
-﻿using PPC.Response.Result;
+﻿using WebApi.Response.Result;
 using Newtonsoft.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace PPC.Response.Class
+namespace WebApi.Response.Class
 {
     public partial class BaseResponse<T>
     {
 
 
-        [JsonPropertyName(nameof(PPCAPI))]
-      // [JsonProperty(PropertyName = nameof(PPCAPI))]
-        public ResponseResults<T> PPCAPI { get; set; }
+        [JsonPropertyName(nameof(Payload))]
+        public ResponseResults<T> Payload { get; set; }//PPCApi
         public BaseResponse()
         {
-            PPCAPI = new ResponseResults<T>();
+            Payload = new ResponseResults<T>();
 
         }
     }

@@ -1,23 +1,26 @@
-﻿using PPC.Core.Extensions;
+﻿using WebApi.Core.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
-using PPC.Base.Models.Exceptions;
-using PPC.Base;
-using PPC.Core.Interface;
-using PPC.Core.Log;
-using PPC.Core.Models;
-using PPC.Response.DTOs;
-using PPC.Response.Result;
+using WebApi.Base.Models.Exceptions;
+using WebApi.Base;
+using WebApi.Core.Interface;
+using WebApi.Core.Log;
+using WebApi.Core.Models;
+using WebApi.Response.DTOs;
+using WebApi.Response.Result;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using WebApi.Common.Attributes;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace PPC.API.Controllers
+namespace WebApi.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [EnableCors("CorsPolicy")]
     [IgnoreAntiforgeryToken]
+    //[ServiceMapTo(typeof(ISettingGeneralsService), ServiceLifetime.Scoped)]
     public class SettingGeneralController : Controller
     {
 
@@ -37,7 +40,6 @@ namespace PPC.API.Controllers
         #endregion
 
         [HttpGet]
-
         public async Task<IActionResult> GetSettingGenerals()
         {
             try
@@ -63,7 +65,6 @@ namespace PPC.API.Controllers
         }
 
         [HttpGet]
-
         public async Task<IActionResult> GetSettingGeneralsByID(int id)
         {
             try
@@ -115,7 +116,6 @@ namespace PPC.API.Controllers
 
 
         [HttpPost]
-
         public IActionResult Append([FromBody] SettingGeneralsDTO settingGenerals)
         {
             try
@@ -151,7 +151,6 @@ namespace PPC.API.Controllers
         }
 
         [HttpPost]
-
         public IActionResult Update([FromBody] SettingGeneralsDTO settingGenerals)
         {
             try
@@ -186,7 +185,6 @@ namespace PPC.API.Controllers
         }
 
         [HttpGet]
-
         public IActionResult Delete(int id)
         {
             try

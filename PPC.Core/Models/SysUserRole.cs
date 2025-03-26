@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
     [Table("SysUserRoles")]
     public class SysUserRole : IEntity

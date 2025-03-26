@@ -1,10 +1,10 @@
-using PPC.Core.Models;
-using PPC.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Interface;
 using AtlasCellData.ADO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface ILoginLogsService
     {

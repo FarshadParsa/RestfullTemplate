@@ -3,10 +3,10 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using PPC.Core.Interface;
-using PPC.Core.Models;
+using WebApi.Core.Interface;
+using WebApi.Core.Models;
 
-namespace PPC.API.Middleware
+namespace WebApi.API.Middleware
 {
     public class AuditFilterAttribute : ActionFilterAttribute
     {

@@ -1,10 +1,10 @@
-﻿using PPC.Core.Interface;
-using PPC.Core.Models;
+﻿using WebApi.Core.Interface;
+using WebApi.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class TestService : BaseService, ITestService
     {

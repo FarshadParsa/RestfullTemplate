@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System.ComponentModel;
 using Newtonsoft.Json;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
     [Table("Province")]
     public class Provinces : IEntity

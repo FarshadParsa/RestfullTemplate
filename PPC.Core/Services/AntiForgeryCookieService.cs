@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
-using PPC.Core.Common;
-using PPC.Core.Interface;
+using WebApi.Core.Common;
+using WebApi.Core.Interface;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class AntiForgeryCookieService : IAntiForgeryCookieService
     {

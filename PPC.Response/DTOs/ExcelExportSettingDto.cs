@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace PPC.Response.DTOs
+namespace WebApi.Response.DTOs
 {
     public class ExcelExportSettingDTO
     {

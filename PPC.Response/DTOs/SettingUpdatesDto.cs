@@ -1,5 +1,5 @@
 using Newtonsoft.Json;
-namespace PPC.Response.DTOs
+namespace WebApi.Response.DTOs
 {
     public class SettingUpdatesDTO
     {

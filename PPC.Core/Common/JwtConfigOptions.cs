@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Core.Common
+namespace WebApi.Core.Common
 {
     public class JwtConfigOptions
     {

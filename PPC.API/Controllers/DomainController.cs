@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PPC.Base.Models.Exceptions;
-using PPC.Core.Interface;
-using PPC.Core.Log;
-using PPC.Response.Result;
+using WebApi.Base.Models.Exceptions;
+using WebApi.Core.Interface;
+using WebApi.Core.Log;
+using WebApi.Response.Result;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
-using PPC.Response.DTOs;
-using PPC.Core.Extensions;
+using WebApi.Response.DTOs;
+using WebApi.Core.Extensions;
 using System.Linq;
 
-namespace PPC.API.Controllers
+namespace WebApi.API.Controllers
 {
     public class DomainController : Controller
     {
@@ -46,7 +46,7 @@ namespace PPC.API.Controllers
             try
             {
 
-                List<PPC.Core.Models.Domain> domains = _domainsService.GetDomain(true);
+                List<WebApi.Core.Models.Domain> domains = _domainsService.GetDomain(true);
 
                 var res = domains.ConvertToListDto();
 
@@ -75,7 +75,7 @@ namespace PPC.API.Controllers
             try
             {
 
-                List<PPC.Core.Models.Domain> domains = _domainsService.GetDomain(false);
+                List<WebApi.Core.Models.Domain> domains = _domainsService.GetDomain(false);
 
                 var res = domains.ConvertToListDto();
 
@@ -103,7 +103,7 @@ namespace PPC.API.Controllers
             try
             {
 
-                List<PPC.Core.Models.Domain> domains = _domainsService.GetDomain();
+                List<WebApi.Core.Models.Domain> domains = _domainsService.GetDomain();
 
                 var res = domains.ConvertToListDto();
 

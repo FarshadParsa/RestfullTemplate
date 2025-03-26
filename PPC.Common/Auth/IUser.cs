@@ -1,4 +1,4 @@
-﻿namespace PPC.Common.Auth
+﻿namespace WebApi.Common.Auth
 {
     /// <summary>
     /// IUser

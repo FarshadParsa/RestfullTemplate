@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using PPC.Core.Common;
-using PPC.Core.Interface;
+using WebApi.Core.Common;
+using WebApi.Core.Interface;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class TokenValidatorService : ITokenValidatorService
     {

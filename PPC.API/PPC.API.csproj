@@ -33,12 +33,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\BaseInfo\CountryProvince\CountryController.cs" />
+    <Compile Remove="Controllers\BaseInfo\CountryProvince\ProvinceController.cs" />
     <Compile Remove="Controllers\DataDosingController.cs" />
     <Compile Remove="Controllers\DataGrindingController.cs" />
     <Compile Remove="Controllers\DataPatilController.cs" />
     <Compile Remove="Controllers\DataPremixController.cs" />
     <Compile Remove="Controllers\RawMaterialController.cs" />
     <Compile Remove="Controllers\RawMaterialGroupController.cs" />
+    <Compile Remove="Controllers\UnitController.cs" />
+    <Compile Remove="Controllers\Users\UserController.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,7 +50,6 @@
     <Compile Include="Areas\Admin\Controllers\Log\LoginLogController.cs" />
     <Compile Include="Areas\Admin\Controllers\Permissions\DenyAccessController.cs" />
     <Compile Include="Areas\Admin\Controllers\Permissions\MenuAccessStateController.cs" />
-    <Compile Include="Areas\Admin\Controllers\Setting\SettingController.cs" />
     <Compile Include="Areas\Admin\Controllers\Setting\SettingGeneralController.cs" />
     <Compile Include="Areas\Admin\Controllers\Setting\SettingUpdateController.cs" />
   </ItemGroup>
@@ -75,7 +78,9 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Controllers\BaseInfo\CountryProvince\" />
     <Folder Include="Controllers\General\" />
+    <Folder Include="Controllers\Users\" />
     <Folder Include="Views\" />
   </ItemGroup>
 

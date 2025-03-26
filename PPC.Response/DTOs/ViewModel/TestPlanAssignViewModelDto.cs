@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPC.Response.DTOs
+namespace WebApi.Response.DTOs
 {
     public class TestPlanAssignViewModelDTO
     {

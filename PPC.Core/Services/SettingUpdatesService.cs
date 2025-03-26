@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PPC.Core.Interface;
+using WebApi.Core.Interface;
 
-using PPC.Core.Models;
+using WebApi.Core.Models;
 
-using PPC.Core.Repository;
+using WebApi.Core.Repository;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class SettingUpdatesService : BaseService, ISettingUpdatesService
     {

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AtlasCellData.ADO;
-using PPC.Base;
-using PPC.Common.Auth;
-using PPC.Core.Models;
-using PPC.Exception;
+using WebApi.Base;
+using WebApi.Common.Auth;
+using WebApi.Core.Models;
+using WebApi.Exception;
 
-namespace PPC.Core.Common.Security
+namespace WebApi.Core.Common.Security
 {
     public class UserSecurity
     {
@@ -191,8 +191,8 @@ namespace PPC.Core.Common.Security
                 MaxID++;
                 log.transaction = tr;
                 log.LoginLogsID = MaxID;
-                log.LoginDate = PPC.Common.General.CurrentDateString;// PrintingCommon.General.CurrentDateOfServer;
-                log.LoginTime = PPC.Common.General.CurrentTimeString;
+                log.LoginDate = WebApi.Common.General.CurrentDateString;// PrintingCommon.General.CurrentDateOfServer;
+                log.LoginTime = WebApi.Common.General.CurrentTimeString;
                 log.LogoutDate = "____/__/__";
                 log.LogoutTime = "__:__";
                 log.StationID = station.StationID;
@@ -229,8 +229,8 @@ namespace PPC.Core.Common.Security
                 {
                     LoginLogsDL log = new LoginLogsDL(logID[0].LoginLogsID);
                     log.getInfo();
-                    log.LogoutDate = PPC.Common.General.CurrentDateString;
-                    log.LogoutTime = PPC.Common.General.CurrentDateString;
+                    log.LogoutDate = WebApi.Common.General.CurrentDateString;
+                    log.LogoutTime = WebApi.Common.General.CurrentDateString;
                     log.transaction = tr;
                     log.update_SQL();
                 }

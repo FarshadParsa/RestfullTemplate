@@ -1,6 +1,6 @@
-﻿using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
+﻿using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,15 +12,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq.Expressions;
 using System.Reflection;
-using PPC.Base.Extensions;
-using PPC.Base;
+using WebApi.Base.Extensions;
+using WebApi.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using AtlasCellData.ADO;
 
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class ProvincesService : BaseService, IProvincesService
     {

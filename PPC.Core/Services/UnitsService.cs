@@ -1,5 +1,5 @@
-﻿using PPC.Core.Interface;
-using PPC.Core.Models;
+﻿using WebApi.Core.Interface;
+using WebApi.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using PPC.Core.Repository;
+using WebApi.Core.Repository;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class UnitsService : BaseService, IUnitsService
     {

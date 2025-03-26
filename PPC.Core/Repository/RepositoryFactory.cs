@@ -1,14 +1,15 @@
-﻿using PPC.Core.Models;
+﻿using WebApi.Core.Models;
 using System;
+using WebApi.Common.Attributes;
 
-namespace PPC.Core.Repository
+namespace WebApi.Core.Repository
 {
     [ServiceMapTo(typeof(RepositoryFactory))]
     public class RepositoryFactory : IRepositoryFactory
     {
-        private PPCDbContext _context;
+        private ApplicationDbContext _context;
 
-        public RepositoryFactory(PPCDbContext context)
+        public RepositoryFactory(ApplicationDbContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context)); 
         }

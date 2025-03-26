@@ -1,13 +1,14 @@
 ﻿using Microsoft.Extensions.Options;
-using PPC.Base;
-using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
+using WebApi.Base;
+using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebApi.Common.Attributes;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     [ServiceMapTo(typeof(IAuditService))]
     public class AuditService : BaseService, IAuditService

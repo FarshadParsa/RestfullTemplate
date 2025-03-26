@@ -1,17 +1,17 @@
-using PPC.Core.Extensions;
+using WebApi.Core.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
-using PPC.Base.Models.Exceptions;
-using PPC.Core.Interface;
-using PPC.Core.Log;
-using PPC.Core.Models;
-using PPC.Response.DTOs;
-using PPC.Response.Result;
+using WebApi.Base.Models.Exceptions;
+using WebApi.Core.Interface;
+using WebApi.Core.Log;
+using WebApi.Core.Models;
+using WebApi.Response.DTOs;
+using WebApi.Response.Result;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-namespace PPC.API.Controllers
+namespace WebApi.API.Controllers
 {
     [Authorize]
     [EnableCors("CorsPolicy")]

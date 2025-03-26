@@ -1,9 +1,9 @@
-﻿using PPC.Base.Extensions;
+﻿using WebApi.Base.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Base.Utility
+namespace WebApi.Base.Utility
 {
     public class Utility
     {

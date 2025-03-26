@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
-using PPC.Response.DTOs;
+using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
+using WebApi.Response.DTOs;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class ExcelExportSettingService : BaseService, IExcelExportSettingService
     {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Exception
+namespace WebApi.Exception
 {
     public class HandledException:System.Exception   
     {

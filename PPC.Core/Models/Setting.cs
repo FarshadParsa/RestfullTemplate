@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System.ComponentModel;
 using Newtonsoft.Json;
 using System;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
     [Table("Setting")]
     public class Settings : IEntity
@@ -43,9 +43,6 @@ namespace PPC.Core.Models
         public Users User { get; set; }
 
 
-        [JsonProperty("Station")]
-        [ForeignKey(nameof(StationID))]
-        public Stations Station { get; set; }
 
     }
 }

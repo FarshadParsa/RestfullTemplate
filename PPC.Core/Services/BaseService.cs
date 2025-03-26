@@ -1,9 +1,9 @@
-﻿using PPC.Core.Repository;
+﻿using WebApi.Core.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public abstract class BaseService
     {

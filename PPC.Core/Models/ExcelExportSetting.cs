@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System.ComponentModel;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
     [Table("ExcelExportSetting")]
     public class ExcelExportSetting : IEntity

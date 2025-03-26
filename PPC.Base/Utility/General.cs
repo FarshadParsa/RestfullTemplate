@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Base.Utility
+namespace WebApi.Base.Utility
 {
     
 
@@ -33,7 +33,7 @@ namespace PPC.Base.Utility
         {
             get
             {
-                return (new PPC.Base.Utility.PersianLibrary.PersianCalendar()).getDateStr(DateTime.Now);
+                return (new WebApi.Base.Utility.PersianLibrary.PersianCalendar()).getDateStr(DateTime.Now);
             }
         }
 

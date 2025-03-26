@@ -1,4 +1,4 @@
-﻿namespace PPC.Base.Models.Exceptions
+﻿namespace WebApi.Base.Models.Exceptions
 {
     public class ForbidenApiException : HttpResponseException
     {

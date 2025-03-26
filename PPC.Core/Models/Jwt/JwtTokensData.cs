@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
-namespace PPC.Core.Models.Jwt
+namespace WebApi.Core.Models.Jwt
 {
     public class JwtTokensData
     {

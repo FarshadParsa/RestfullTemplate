@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Collections;
 
-namespace PPC.Base
+namespace WebApi.Base
 {
     public class Functions
     {

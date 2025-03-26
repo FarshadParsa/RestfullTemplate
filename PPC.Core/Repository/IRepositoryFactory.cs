@@ -1,6 +1,6 @@
-﻿using PPC.Core.Models;
+﻿using WebApi.Core.Models;
 
-namespace PPC.Core.Repository
+namespace WebApi.Core.Repository
 {
     public interface IRepositoryFactory
     {

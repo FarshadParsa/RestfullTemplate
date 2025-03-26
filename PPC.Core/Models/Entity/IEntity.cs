@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Core.Models.Entity
+namespace WebApi.Core.Models.Entity
 {
     public interface IEntity
     {

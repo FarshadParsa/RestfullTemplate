@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace PPC.Base.Extensions
+namespace WebApi.Base.Extensions
 {
     public static class Extensions
     {

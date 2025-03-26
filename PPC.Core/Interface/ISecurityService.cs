@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface ISecurityService
     {

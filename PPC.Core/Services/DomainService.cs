@@ -1,14 +1,14 @@
-﻿using PPC.Core.Interface;
-using PPC.Core.Models;
-using PPC.Core.Repository;
-using PPC.Response.DTOs;
+﻿using WebApi.Core.Interface;
+using WebApi.Core.Models;
+using WebApi.Core.Repository;
+using WebApi.Response.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class DomainService : BaseService, IDomainService
     {

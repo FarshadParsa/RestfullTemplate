@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System.Text;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
     [Table("SysRoles")]
     public class SysRole : IEntity

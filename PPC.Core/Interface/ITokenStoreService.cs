@@ -1,10 +1,10 @@
-﻿using PPC.Core.Models;
+﻿using WebApi.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface ITokenStoreService
     {

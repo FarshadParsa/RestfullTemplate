@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Response.DTOs
+namespace WebApi.Response.DTOs
 {
     public class SettingUpdateViewModelDTO
 

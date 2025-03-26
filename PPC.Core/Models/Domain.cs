@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
 
     [Table("Domain")]

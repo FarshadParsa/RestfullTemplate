@@ -4,7 +4,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace PPC.Core.Common.Security
+namespace WebApi.Core.Common.Security
 {
     public class SHA1
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PPC.Base.Models.Exceptions
+namespace WebApi.Base.Models.Exceptions
 {
     public abstract class HttpResponseException : Exception
     {

@@ -1,9 +1,9 @@
-﻿using PPC.Core.Interface;
+﻿using WebApi.Core.Interface;
 using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace PPC.Core.Services
+namespace WebApi.Core.Services
 {
     public class SecurityService : ISecurityService
     {

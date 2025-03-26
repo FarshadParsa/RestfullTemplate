@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace PPC.Response.DTOs
+namespace WebApi.Response.DTOs
 {
     public class UsersDTO
     {

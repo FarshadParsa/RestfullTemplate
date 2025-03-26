@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using PPC.Core.Models.Entity;
+using WebApi.Core.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
 
     [Table("User")]
@@ -133,8 +133,6 @@ namespace PPC.Core.Models
 
         }
 
-        //public Stations Stations { get; set; }
-        public virtual ICollection<Stations> Stations { get; set; }
 
         [JsonProperty("User_EditUser")]
         [ForeignKey(nameof(EditUserID))]
@@ -149,16 +147,7 @@ namespace PPC.Core.Models
 
         #region Children
 
-        #region Reverts
 
-
-        /// <summary>
-        /// List<User>
-        /// </summary>
-        [ForeignKey(nameof(UserID))]
-        public virtual List<Reverts> RevertsList { get; set; }
-
-        #endregion
 
         #endregion
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPC.Core.Interface
+namespace WebApi.Core.Interface
 {
     public interface ITokenValidatorService
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PPC.Base.Utility
+namespace WebApi.Base.Utility
 {
     public class JSON
     {

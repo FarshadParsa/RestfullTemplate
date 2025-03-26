@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PPC.Base.Models
+namespace WebApi.Base.Models
 {
     public static class ClaimAttributes
     {

@@ -4,20 +4,20 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApi.Extension;
 using Microsoft.Extensions.Hosting;
-using PPC.Core;
-using PPC.Core.Repository;
+using WebApi.Core.Repository;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
-using PPC.API.Middleware;
+using WebApi.API.Middleware;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using PPC.Common.Auth;
-using PPC.Core.Extensions;
+using WebApi.Common.Auth;
+using WebApi.Core.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.CodeAnalysis.Options;
+using WebApi.Core;
 
-namespace PPC.API
+namespace WebApi
 {
     public class Startup
     {
@@ -30,26 +30,23 @@ namespace PPC.API
         public void ConfigureServices(IServiceCollection services)
         {
             #region configure Swagger
+
             services.ConfigSwagger();
             services.ConfigJWT(Configuration);
+
             #endregion configure Swagger
 
+
             #region configure DI Services
-            services.ConfigBIGServices();
+
+            services.ConfigureServices();
             
             services.AddScoped<ExtAutoMapper>();
 
 
             #region DBContex
 
-            services.AddScoped<IUnitOfWork, UnitOfWork<PPCDbContext>>();
-
-            //services.AddDbContext<PPCDbContext>((provider, options) =>
-            //{
-            //    options.UseSqlServer(DatabaseSetting.ConnectionString)
-            //           .UseLazyLoadingProxies(); // فعال کردن Lazy Loading
-            //});
-            //services.AddScoped<IRepositoryFactory, RepositoryFactory>();
+            services.AddScoped<IUnitOfWork, UnitOfWork<ApplicationDbContext>>();
 
             #endregion
 
@@ -72,12 +69,6 @@ namespace PPC.API
                     config.Filters.Add(typeof(AuditFilterAttribute));
                 });
             #endregion configure Controllers
-
-            #region configure AutpMapper
-
-            services.AddAutoMapper(typeof(Startup));
-
-            #endregion
 
         }
 

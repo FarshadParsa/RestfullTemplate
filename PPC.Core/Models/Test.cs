@@ -1,11 +1,11 @@
-﻿using PPC.Core.Models.Entity;
+﻿using WebApi.Core.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace PPC.Core.Models
+namespace WebApi.Core.Models
 {
 
     [Table("Test")]

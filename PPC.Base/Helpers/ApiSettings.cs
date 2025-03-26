@@ -1,4 +1,4 @@
-namespace PPC.Base
+namespace WebApi.Base
 {
     public class ApiSettings
     {
